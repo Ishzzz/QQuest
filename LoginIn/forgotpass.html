@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Forgot Password</title>
+    <link rel="icon" type="image/x-icon" href="favi.png">
+	<link rel="stylesheet" type="text/css" href="forgotpass.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="for_pass">
+    <div class="forgot-pass-container" style="padding-left: 40px; padding-right: 40px;">
+        <center><h1 style="padding-top: 47px;">Forgot<br>Password ?</h1></center>
+        <form action="verify.php" method="POST">
+            <p style="margin-bottom: 5px; text-align: left;">Enter your registered email id.</p>
+            <input type="text" name="email" placeholder="Email" required="">
+            <p style="margin-bottom: 5px; text-align: left;">Answer the security question.</p>
+            <input type="text" name="security_ans" placeholder="What is your favourite colour ?" required=""><br>
+            <div style="align-self: center;"><button   type="submit" name="btn-continue" value=true >Continue</button></div>
+            <a href="signlog.html" class="anchor2"><p>New Here? Sign Up.<br>Or<br>Already an Existing User? Sign In.<p></a>
+        </form>
+    </div>
+</div>
+    
+</body>
+</html>

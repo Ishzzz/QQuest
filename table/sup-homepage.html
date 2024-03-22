@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QQUEST </title>
+    <link rel="icon" type="image/x-icon" href="favi.png">
+    <link rel="stylesheet" href="sup-homepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+  <body>
+
+    <header>
+      <a href="#" class="brand">QQUEST</a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <ul>  
+            <li><a href="sup-homepage.html" class="nav-bar">Home</a></li>
+            <li><a href="view_requests.php" class="nav-bar">View Request</a></li>
+            <li><a href="feed.php" class="nav-bar">View Feedback</a></li>
+            <li><a href="#" class="nav-bar">Profile</a>
+                    <ul class="submenu-1">
+                        <!-- <li><a href="../LoginIn/forgotpass.html">Forgot Password</a></li> -->
+                        <li><a href="../LoginIn/logout.php">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+          
+          
+        </div>
+      </div>
+    </header>
+
+    <section class="home">
+      <video class="video-slide active" src="13.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="compund.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="mess.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="room.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="gym.mp4" autoplay muted loop></video>
+      <div class="content active">
+        <h1>Welcome<br><span>Hostel Q</span></h1>
+        <p>Home away from home.
+               </p>
+        <a href="../calender_d/index.php">Make Request</a>
+      </div>
+      <div class="content">
+        <h1>Compound<br><span></span></h1>
+         <p> The place to relax ,sit by the fountain and enjoy the good weather</p> 
+             <!-- <a href="../calender_d/index.php">Make Request</a> -->
+      </div>
+      
+      <div class="content">
+        <h1>Mess<br><span></span></h1>
+        <p>Air-contioned mess with seating capacity of thousand plus </p> 
+            <!-- <a href="../calender_d/index.php">Make Request</a> -->
+      </div>
+      <div class="content">
+        <h1>Rooms<br><span> </span></h1>
+        <p>Share memories and room with an attached bathroom and a shared balcony for the cluster rooms.
+        </p>
+         <!-- <a href="../calender_d/index.php">Make Request</a> -->
+      </div>
+      <div class="content">
+        <h1>GYM<br><span> </span></h1>
+        <p>Your body is the only place you will live so keep it fit.</p>
+             <!-- <a href="../calender_d/index.php">Make Request</a> -->
+      </div>
+      
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+    //Javacript for responsive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active");
+    });
+
+    //Javacript for video slider navigation
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function(manual){
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+      });
+    });
+    </script>
+
+  </body>
+</html>
+      

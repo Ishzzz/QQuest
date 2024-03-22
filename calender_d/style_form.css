@@ -1,0 +1,306 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  
+  background:  #5FC3E4;  /*fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #5FC3E4, white);   /*Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #5FC3E4, white);  /*W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+  */
+}
+
+form {
+  background-color: #57e7f5; /* light blue */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  
+}
+
+
+
+input[type="number"] 
+{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 40px;
+  border-radius: 5px;
+  border: none;
+  /* box-shadow: 0 14px 28px rgba(0,0,0,0.25) */
+}
+input[type="time"]{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 40px;
+  border-radius: 5px;
+  border: none;
+  /* box-shadow: 0 14px 28px rgba(0,0,0,0.25) */
+    
+}
+
+/* button {
+  margin-left: 710px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+ */
+button:hover {
+  background-color: #b3e9ee;
+}
+
+/* example field names */
+#event_name,
+#event_time_from,
+#event_time_to {
+  max-width: 500px;
+ 
+}
+.right{                                           /*For making outer box */ 
+  width: 480px;
+  margin-left:550px ;
+  border-radius: 15px; 
+  background-color: #57e7f5;
+  height: 600px;  
+margin-top: 100px;
+  padding-top:30px;
+  padding-bottom: -100px ;
+  /* background-image: url(); */
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+    0 10px 10px rgba(0,0,0,0.22);
+
+}
+
+header{
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 200px;
+  transition: 0.5s ease;
+}
+
+header .brand{
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+
+
+@media (max-width: 1040px){
+  header{
+    padding: 12px 20px;
+  }
+}
+
+header .navigation.active{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(1, 1, 1, 0.5);
+}
+
+header .navigation{
+  position: relative;
+}
+
+header .navigation .navigation-items a.nav-bar{
+  position: relative;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 30px;
+  transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a.nav-bar:before{
+  content: '';
+  position: absolute;
+  background: #fff;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a.nav-bar:hover:before{
+  width: 100%;
+}
+
+header .navigation .navigation-items ul li {
+  float: left;
+  position: relative;
+  font-size: 15px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 180px;
+  text-align: center;
+  text-transform: uppercase;
+}
+header .navigation .navigation-items ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  line-height: 60px;
+}
+header .navigation ,.navigation-items ul li:hover>a {
+  background: none;
+}
+
+header .navigation .navigation-items ul.submenu-1 {
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0px;
+  top: 60px;
+  background: rgba(0,0,0,0.3) ;
+  width: 180px;
+  visibility: hidden;
+  transition: opacity 0.3s ease-out, visibility 0.1s 0.1s linear;
+}
+
+header .navigation .navigation-items ul.submenu-1 li {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  clear: both;
+  margin-top: -15px;
+  padding: 0;
+  width: 180px;
+  transition: opacity 0.15s 0.15s ease-out, margin 0.3s 0.1s ease-out;
+}
+
+header .navigation .navigation-items ul li:hover ul.submenu-1 {
+  opacity: 1;
+  visibility: visible;
+}
+header .navigation .navigation-items ul li:hover ul.submenu-1 li {
+  margin-top: 0;
+  opacity: 1;
+}
+
+section{
+  padding: 100px 200px;
+}
+button{                                         /*for add button*/
+  border: 0.5;
+  width: 190px;
+  height:30px;
+  margin-top: -10px;
+  background-color: white;
+  border-radius: 10px;
+  color: darkblue;
+}
+.add-event-input{                                                
+  text-align: center;
+  margin:4px;
+  color: black;
+}
+.add-event-input input{                   /*for input boxes*/
+  width: 350px;
+  height: 30px;
+  box-sizing:border-box ;         /*The width and height properties include the content, padding, and border  */
+  font-size: large;
+  background-color: floralwhite;
+  color: black;
+}
+.box{                                                   /*For black box in left side  */
+  width: 350px;
+  margin-top: -10px;
+  margin-left:-10px;
+  background-color:  rgba(0, 0, 0, 0.822) ; 
+  height:650px; 
+}
+/* .button1{                                     
+ border: 4;
+ width: 190px;
+ height:50px;
+ margin-top: -10px;
+ background-color: white;
+ border-radius: 100px;
+ color: black;
+} */
+
+
+
+/* CSS */
+.button-50 {
+appearance: button;
+background-color:lightcyan
+;
+background-image: none;
+border: 1px solid #000;
+border-radius: 4px;
+height:50px;
+
+box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+box-sizing: border-box;
+color: #0cafbd;
+cursor: pointer;
+display: inline-block;
+font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
+font-size: 14px;
+font-weight: 400;
+line-height: 20px;
+margin: -50px 5px 10px 0;
+overflow: visible;
+padding: 12px 40px;
+text-align: center;
+text-transform: none;
+touch-action: manipulation;
+user-select: none;
+-webkit-user-select: none;
+vertical-align: middle;
+white-space: nowrap;
+}
+
+.button-50:focus {
+text-decoration: none;
+}
+
+.button-50:hover {
+text-decoration: none;
+}
+
+.button-50:active {
+box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+outline: 0;
+text-decoration: none;
+}
+
+.button-50:not([disabled]):active {
+box-shadow: #0cafbd 2px 2px 0 0, #000 2px 2px 0 1px;
+transform: translate(2px, 2px);
+text-decoration: none;
+}
+
+@media (min-width: 768px) {
+.button-50 {
+  padding: 12px 50px;
+}
+}

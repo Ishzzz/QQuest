@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  /* background-color: #cde2f1; */
+
+}
+
+a{                                       /*For removing undeline from anchor tag*/
+    text-decoration: none;
+}
+
+body{                                   /*For background color*/
+    background-color:#4b71d0; 
+    font-family: sans-serif;
+} 
+
+
+header{
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 200px;
+  transition: 0.5s ease;
+ 
+}
+
+header .brand{
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+header .navigation{
+  position: relative;
+}
+
+header .navigation .navigation-items a.nav-bar{
+  position: relative;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 30px;
+  transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a.nav-bar:before{
+  content: '';
+  position: absolute;
+  background: #fff;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a.nav-bar:hover:before{
+  width: 100%;
+}
+
+header .navigation .navigation-items ul li {
+	float: left;
+	position: relative;
+	font-size: 15px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 180px;
+	text-align: center;
+	text-transform: uppercase;
+}
+header .navigation .navigation-items ul li a {
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	line-height: 60px;
+}
+header .navigation ,.navigation-items ul li:hover>a {
+	background: none;
+}
+
+header .navigation .navigation-items ul.submenu-1 {
+	float: left;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	left: 0px;
+	top: 60px;
+	background: rgba(0,0,0,0.3) ;
+	width: 180px;
+	visibility: hidden;
+	transition: opacity 0.3s ease-out, visibility 0.1s 0.1s linear;
+}
+
+header .navigation .navigation-items ul.submenu-1 li {
+	border: none;
+	border-bottom: 1px solid #ccc;
+	clear: both;
+	margin-top: -15px;
+	padding: 0;
+	width: 180px;
+	transition: opacity 0.15s 0.15s ease-out, margin 0.3s 0.1s ease-out;
+}
+
+header .navigation .navigation-items ul li:hover ul.submenu-1 {
+	opacity: 1;
+	visibility: visible;
+}
+header .navigation .navigation-items ul li:hover ul.submenu-1 li {
+	margin-top: 0;
+	opacity: 1;
+}
+
+section{
+  padding: 100px 200px;
+}
